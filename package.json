@@ -15,7 +15,7 @@
     "@rneui/base": "^4.0.0-rc.7",
     "@rneui/themed": "^4.0.0-rc.7",
     "expo": "~45.0.0",
-    "expo-font": "~11.0.1",
+    "expo-font": "~10.1.0",
     "expo-status-bar": "^1.4.2",
     "expo-updates": "~0.15.6",
     "ionicons": "^6.0.4",
