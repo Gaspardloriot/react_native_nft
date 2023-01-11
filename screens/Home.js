@@ -1,16 +1,18 @@
 import React from 'react'
 import {useState} from 'react'
 import { Text, View, SafeAreaView, FlatList } from 'react-native'
+import { SafeAreaProvider, useSafeAreaInsets} from 'react-native-safe-area-context';
 
 
 
 import { COLORS, NFTData } from '../constants'
-import {NFTCard, HomeHeader, FocusedStatusBar} from '../components'
+import { NFTCard, HomeHeader, FocusedStatusBar } from '../components'
 
 const Home = () => {
+   const insets = useSafeAreaInsets();
    return (
-      <SafeAreaView style={{ flex: 1 }}>
-         <FocusedStatusBar backgroundColor={COLORS.primary} />
+      <SafeAreaProvider style={{ flex: 1 }}>
+         <FocusedStatusBar backgroundColor={COLORS.primary} insets={insets.top} />
          <View style={{ flex: 1}}>
             <View style={{ zIndex: 0 }}>
                <FlatList
@@ -25,7 +27,7 @@ const Home = () => {
                <View style={{ height: 300, backgroundColor: COLORS.white, flex:1 }}/>
             </View>
          </View>
-     </SafeAreaView>
+     </SafeAreaProvider>
   )
 }
 
